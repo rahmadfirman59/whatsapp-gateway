@@ -24,13 +24,13 @@ DB_DATABASE={yourdb}
 DB_USERNAME={yourusername}
 DB_PASSWORD={yourpassword}
 
-// .env nodejs
+// in folder server copy .env.example to .env
 PORT=5001 // which port to running on your machine
 KEY=mysupersecretkey # For Securing Some Data
-DB_HOST={localhost}
-DB_USER=r{youruser}
-DB_PASSWORD={yourpassword}
-DB_NAME={yourdbname}
+DB_HOST=localhost
+DB_USER=ryouruser
+DB_PASSWORD=yourpassword
+DB_DATABASE=yourdbname
 ```
 
 ## Install and Running
@@ -50,11 +50,18 @@ Composer update
 ```bash
   composer update 
 ```
-
-
+```bash
+  php artisan migrate --seed 
+```
+```bash
+  php artisan serve
+```
 
 Install dependencies
 
+```bash
+  cd server
+```
 ```bash
   npm install
 ```

@@ -55,25 +55,25 @@
                 </div>
                 <ul class="sidebar-menu">
                     <li><a class="nav-link" href="{{ route('dashboard') }}"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
-{{--                    @if( in_array("users",json_decode(auth()->user()->roles->menu))--}}
-{{--                       || in_array("roles",json_decode(auth()->user()->roles->menu))--}}
-{{--                    )--}}
-{{--                    <li class="nav-item dropdown @if(--}}
-{{--                        request()->routeIs('users*')--}}
-{{--                        || request()->routeIs('roles*')--}}
-{{--                        ) active @endif">--}}
-{{--                        <a href="#" class="nav-link has-dropdown"><i class="fas fa-bars"></i> <span>Master Data</span></a>--}}
-{{--                        <ul class="dropdown-menu">--}}
-{{--                            @if( in_array("users",json_decode(auth()->user()->roles->menu)) )--}}
-{{--                                <li @if( request()->routeIs('users*') ) class="active" @endif ><a class="nav-link" href="{{ route('users') }}">User</a></li>--}}
-{{--                            @endif--}}
-{{--                            @if( in_array("roles",json_decode(auth()->user()->roles->menu)) )--}}
-{{--                                <li @if( request()->routeIs('roles*') ) class="active" @endif ><a class="nav-link" href="{{ route('roles') }}">Roles</a></li>--}}
-{{--                            @endif--}}
+                    @if( in_array("users",json_decode(auth()->user()->roles->menu))
+                       || in_array("roles",json_decode(auth()->user()->roles->menu))
+                    )
+                    <li class="nav-item dropdown @if(
+                        request()->routeIs('users*')
+                        || request()->routeIs('roles*')
+                        ) active @endif">
+                        <a href="#" class="nav-link has-dropdown"><i class="fas fa-bars"></i> <span>Master Data</span></a>
+                        <ul class="dropdown-menu">
+                            @if( in_array("users",json_decode(auth()->user()->roles->menu)) )
+                                <li @if( request()->routeIs('users*') ) class="active" @endif ><a class="nav-link" href="{{ route('users') }}">User</a></li>
+                            @endif
+                            @if( in_array("roles",json_decode(auth()->user()->roles->menu)) )
+                                <li @if( request()->routeIs('roles*') ) class="active" @endif ><a class="nav-link" href="{{ route('roles') }}">Roles</a></li>
+                            @endif
 
-{{--                        </ul>--}}
-{{--                    </li>--}}
-{{--                    @endif--}}
+                        </ul>
+                    </li>
+                    @endif
                     @if( in_array("autoreplys",json_decode(auth()->user()->roles->menu)) )
                         <li @if( request()->routeIs('autoreplys*') ) class="active" @endif><a class="nav-link" href="{{ route('autoreplys') }}"><i class="fas fa-reply-all"></i> <span>Auto Reply</span></a></li>
                     @endif

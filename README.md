@@ -75,5 +75,5 @@ Start the server
 Open On Browser & add device
 
 ```bash
-    http://localhost/whatsapp-gateway/public/login
+    http://127.0.0.1:8000/login
 ```
